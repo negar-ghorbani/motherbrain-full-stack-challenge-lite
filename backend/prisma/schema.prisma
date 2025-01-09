@@ -13,7 +13,7 @@ datasource db {
 model FundingRound {
   id     String @id @default(uuid())
   name   String
-  amount Int
+  amount BigInt
 
   @@map("funding_round")
 }
