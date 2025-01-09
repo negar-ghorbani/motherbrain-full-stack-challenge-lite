@@ -2,7 +2,7 @@
 
 1. Fork this repo.
 2. Run `yarn install` and `yarn dev` in the `backend` and `frontend` folders respectively.
-3. You can find the description of the assignment at http://localhost:5173/ once you have completed step number 2.
+3. You can find the description of the assignment at http://localhost:5173/ once you have completed step #2.
 
 Good luck!
 
