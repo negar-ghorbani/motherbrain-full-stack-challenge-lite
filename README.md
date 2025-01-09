@@ -1,7 +1,7 @@
 # Motherbrain Full Stack Challenge
 
 1. Fork this repo.
-2. Run `yarn install` and `yarn start` in the `backend` and `frontend` folders respectively.
+2. Run `yarn install` and `yarn dev` in the `backend` and `frontend` folders respectively.
 
 ## The Challenge
 
