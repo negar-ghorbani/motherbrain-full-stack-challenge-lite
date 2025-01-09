@@ -5,7 +5,7 @@ import { fetchFundingRounds } from "./api";
 
 const App = () => {
   const [fundingData, setFundingData] = useState<
-    { round: string; amount: number }[]
+    { name: string; amount: number }[]
   >([]);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const App = () => {
   }, []);
 
   const chartData = {
-    labels: fundingData.map(item => item.round),
+    labels: fundingData.map(item => item.name),
     datasets: [
       {
         label: "Funding Amounts",

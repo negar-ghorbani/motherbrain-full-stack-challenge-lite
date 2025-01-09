@@ -1,4 +1,7 @@
 import express, { Request, Response } from "express";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 const app = express();
 const port = 3000;
@@ -8,13 +11,13 @@ app.use((_req, res, next) => {
   next();
 });
 
-app.get("/funding-rounds", (req: Request, res: Response) => {
-  const fundingRounds = [
-    { round: "Example Seed", amount: 50000 },
-    { round: "Example Series A", amount: 200000 },
-    { round: "Example Series B", amount: 500000 },
-  ];
-  res.json(fundingRounds);
+app.get("/funding-rounds", async (req: Request, res: Response) => {
+  const fundingRounds = await prisma.fundingRound.findMany({
+    take: 20,
+  });
+  res.json(
+    fundingRounds.map(({ name, amount }) => ({ name, amount: Number(amount) })),
+  );
 });
 
 app.listen(port, () => {
