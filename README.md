@@ -6,3 +6,7 @@
 ## The Challenge
 
 This repository is a barebones setup with a Node backend and a React frontend. If you really want to, you can tear it all down and start from scratch, but this is meant to get you started immediately.
+
+### Notes
+
+Consider installing Prisma extension in your IDE/editor to simplify working with the `schema.prisma` file.

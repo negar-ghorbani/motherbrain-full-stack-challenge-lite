@@ -10,9 +10,9 @@ app.use((_req, res, next) => {
 
 app.get("/funding-rounds", (req: Request, res: Response) => {
   const fundingRounds = [
-    { round: "Seed", amount: 50000 },
-    { round: "Series A", amount: 200000 },
-    { round: "Series B", amount: 500000 },
+    { round: "Example Seed", amount: 50000 },
+    { round: "Example Series A", amount: 200000 },
+    { round: "Example Series B", amount: 500000 },
   ];
   res.json(fundingRounds);
 });
