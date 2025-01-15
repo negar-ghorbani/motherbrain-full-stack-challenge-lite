@@ -14,6 +14,7 @@ model FundingRound {
   id     String @id @default(uuid())
   name   String
   amount BigInt
+  date   DateTime
 
   @@map("funding_round")
 }
